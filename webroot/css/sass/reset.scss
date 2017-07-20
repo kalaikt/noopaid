@@ -1,0 +1,346 @@
+@import 'modules/variable.scss';
+@import 'modules/mixins.scss';
+
+
+*{
+	margin:0;
+	padding:0;
+	@extend .box-sizing; 
+}
+
+body{
+	background:$white-color;
+	color:$gray-color2;
+	font-weight:$weight400;
+	line-height:24px;
+	font-size:$font-size1;
+	font-family:$roboto-font;
+}
+
+a{
+	text-decoration:none;
+	color:$gray-color;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+ul, li{
+	list-style:none;
+}
+
+ul{
+	padding:0;
+	margin:0;
+}
+
+img{
+	max-width:100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:$weight400;
+	color:$black-color;
+}
+
+h1{
+	font-size:$font-size10;
+}
+
+h2{
+	font-size:$font-size9;
+}
+
+h3{
+	font-size: $font-size8;
+}
+
+h4{
+	font-size:$font-size7;
+}
+
+h5{
+	font-size:$font-size6;
+}
+
+
+h6{
+	font-size:$font-size5;
+}
+
+
+/* common css */
+
+.button{
+	padding:5px 10px;
+	@include display(inline-block);
+	@include valign(top);
+	background:$lightgray-color;
+	color:$black-color;
+	font-size:$font-size2;
+	@include transition(all 0.4s);
+	border:solid 1px $lightgray-color;
+}
+
+.borderbtn{
+	@extend .button;
+	background:none;
+	border:solid 1px $green-color;
+	color:$green-color;
+}
+
+.borderbtn:hover, .borderbtn:focus{
+	background:$green-color;
+	color:$white-color;
+}
+
+.greenbtn{
+	@extend .button;
+	background:none;
+	border:solid 1px $green-color;
+	background:$green-color;
+	color:$white-color;
+}
+
+.greenbtn:hover, .greenbtn:focus{
+	color:$green-color;
+	background:$white-color;
+}
+
+.purplebtn{
+	@extend .button;
+	background:$purple-color2;
+	border:solid 1px $purple-color2;
+	color:$white-color;
+	padding:7px 20px;
+	@include border-radius(10px);
+}
+
+.purplebtn:hover, .purplebtn:focus{
+	color:$white-color;
+}
+
+.btn-border-gray{
+	  border-color: $gray-color2;
+ 	 color: $gray-color2;
+ 	 background:none;
+ 	 @include border-radius(10px);
+}
+
+.linkedinbtn{
+	width:100%;
+	color:$white-color;
+	text-align:center;
+	background:$linkedinbg-color;
+
+	&:hover{
+		color:$white-color;
+	}
+	&:focus{
+		color:$white-color;
+	}
+}
+
+/* header */
+
+
+header{
+	background:$white-color;
+	@include position(fixed);
+	top:0;
+	left:0;
+	width:100%;
+	@include box-shadow(0 5px 5px rgba(107,44,206,0.35));
+	z-index:999;
+
+ .brand{
+	margin:12px 0;
+
+	@media(max-width:768px){
+		text-align:center;
+	}
+
+	@media(max-width:680px){
+		text-align:left;
+	}
+
+	@media(max-width:380px){
+		width:100%;
+		text-align:center;
+	}
+}
+
+
+.headernav{
+	width:60%;
+
+.mobimenubtn{
+	display:none;
+	width:25px;
+	background:none;
+	border:none;
+	box-shadow:none;
+	margin-top:20px;
+
+	span{
+		height:2px;
+		background:$gray-color;
+		margin: 4px 0;
+		display:block;
+	}
+
+	@media(max-width:480px){
+		display:block;
+	}
+
+}
+ li{
+	display:inline-block;
+	padding:7.6px 5px;
+	border-bottom:solid 5px $white-color;
+	@include transition(all 0.4s);
+
+&:hover, &.activenav{
+	border-bottom:solid 5px $purple-color;
+}
+
+ a{
+	display:inline-block;
+	padding:10px;
+	color:$gray-color;
+	@include transition(all 0.4s);
+}
+
+	&:hover a, &.activenav a{
+		color:$purple-color;
+	}
+
+}
+
+@media(max-width:1080px){
+	width:70%;
+	@include position(relative);
+}
+
+@media(max-width:480px){
+	width:30%;
+
+	ul {
+		position:absolute;
+		width:200px;
+		overflow:hidden;
+		left:-15px;
+		box-shadow:0 2px 3px rgba(0,0,0,0.45);
+		top:64px;
+		width:0;
+		opacity:0;
+		visibility:hidden;
+		@include transition(all 0.4s ease-in-out 0.4s);
+
+
+		li{
+			width:100%;
+			background:$white-color;
+			border-bottom-color:$lightgray-color;
+			width:200px;
+
+			a{
+				color:$gray-color;
+				display:block;
+				padding:5px 10px;
+			}
+		}
+	}
+
+	&:hover ul{
+		width:200px;
+		opacity:1;
+		visibility:visible;
+	}
+}
+
+}
+ .headersearh{
+	padding:20px;
+	border-left:solid 1px $lightgray-color;
+	float:right;
+	width:40%;
+	input[type="text"]{
+		width:100%;
+		background:none;
+		border:none;
+		color:$black-color;
+	 &:focus{
+		outline:none;
+	}
+	}
+	@media(max-width:1080px){
+		width:30%;	
+	}
+	@media(max-width:480px){
+		width:70%;
+	}
+}
+
+.headerright{
+	margin-top:12px;
+	a{
+		margin-left:10px;
+
+	}
+	@media(max-width:380px){
+				width:100%;
+				text-align:center;
+	}
+	 
+}
+
+}
+
+/* footer css */
+
+footer{
+	background:$black-color;
+	color:$white-color;
+
+	h5{
+		color:$white-color;
+		margin:0 0 20px;
+		padding-bottom:10px;
+		border-bottom:solid 3px $purple-color; 
+	}
+
+	.mega-footer__links {
+	  padding-bottom: 20px;
+	  padding-top: 40px;
+	}
+
+	a{
+		color:#fff;
+		&:hover{
+			color: $gray-color;
+		}
+	}
+
+	.footerbottom{
+		background:$gray-color;
+		padding:10px 0;
+	}
+
+	@media(max-width:768px){
+	.mega-footer__links-list{
+		margin-bottom:15px;
+
+		li{
+			display:inline-block;
+			vertical-align:top;
+			padding:0 5px;
+
+			a{
+				text-decoration:underline;
+			}
+		}
+	}
+	}
+}

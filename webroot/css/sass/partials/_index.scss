@@ -1,0 +1,286 @@
+.homebanner{
+	color:$white-color;
+	margin-top:64px;
+.flexcontent{
+	@include position(relative);
+}
+h1{
+	font-weight:$weight300;
+	text-transform:uppercase;
+	margin-bottom:30px;
+	color:$white-color;
+
+	@media(max-width:480px){
+		font-size:34px;
+	}
+}
+
+ h5{
+	margin-bottom:30px;
+	color:$white-color;
+}
+
+}
+
+.homebanner_slide{
+	 @include background('../../images/bannnerimg.jpg');
+	 @include backround-size(cover);
+
+	 img{
+	 	width:100%;
+	 }
+}
+
+.homebanner_content{
+	margin:50px 0;
+	@include position(absolute);
+	width:100%;
+	left:0;
+	top:30%;
+	z-index:2;
+}
+
+.lovelyproject{
+ 
+	@include position(relative);
+	@media(max-width:768px){
+		text-align:center;
+	}
+
+	.container{
+		background:#fff;
+		@include border-radius(10px 10px 0 0);
+		padding-top:20px;
+		 
+	}
+
+	.loadmorestrip{
+		margin-bottom:20px;
+
+		.borderbtn{
+			padding:5px 20px;
+		}
+
+	}
+
+
+	.sectionheading{
+	 	margin-bottom: 35px;
+		h4{
+			@include display(inline-block);	
+			border-bottom:solid 2px $green-color;
+			margin:0;
+			padding:5px 0;
+
+			span{
+				color:$green-color;
+			}
+		}
+	}
+	@media(max-width:980px){
+		.gig-item{
+			@include display(inline-block);
+			vertical-align:top;
+			margin:0 2.0259319% 20px;
+		}
+	}
+
+	@media(max-width:980px){
+		.gig-item{
+			margin:0 0 20px;
+		}
+	}
+
+	.gig-item-default {
+		background: $white-color;
+		width: 232px;
+		height: 280px; 
+		@include display(inline-block);
+		@include position(relative); 
+		border: 3px $lightgray-color solid;
+		cursor:pointer; 
+		margin-bottom:20px;
+		
+
+		text-align:left;
+
+		@media(max-width:768px){
+			float:none;
+			@include display(inline-block);
+			margin-bottom:20px;
+			vertical-align:top;
+		}
+
+		.badaestrip{
+
+		padding:5px 0;
+
+		.card-badges {
+		  padding: 0 12px;
+		  height:26px;
+		  overflow:hidden;
+		  @include transition(0.15s ease-in-out);
+
+		  .gig-badges.featured{
+		  	 
+		  	@include display(inline);
+		  	padding:5px 0px;
+		  	 
+		  	line-height:normal;
+		  	 
+
+		  	a{
+		  		color:$white-color;
+		  	}
+		  }
+		}
+		 
+		.gig-seller {
+			background-color: #fff;
+			@include position(relative);
+			z-index: 1;
+			top: 0;
+			left: 0;
+			color: $lightgray-color;
+			 width:auto;
+			padding: 0 12px;
+			overflow: hidden;
+			@include transition(0.15s ease-in-out);
+			@include transform(translate3d(0, 0, 0));
+			color:$black-color;
+			font-weight:$weight600;
+			
+			.circ-rating-s8 {
+			  float: right;
+			  display: block;
+			  margin-right:5px; 
+			  margin-top: 3px;
+			  
+			  &:nth-child(2){
+				color:$purple-color; 
+			 }
+			  
+			}
+		}
+		
+		 
+		}
+		.gig-link-main {
+		  display: block;
+		  position: relative;
+		  text-decoration: none !important;
+		 @include transition(0.15s ease-in-out);
+		 @include transform(translate3d(0, 0, 0));
+
+		}
+		
+		 
+
+	   h6 {
+		  padding: 5px 12px 9px 12px; 
+		  color: $gray-color; 
+		  @include display(block); 
+		  @include workbreak(break-word);
+		  font-size:$font-size2;
+		  
+		  @include transition(0.15s ease-in-out);
+		  
+		  a{
+			
+		  	color:$gray-color;
+			span{
+			color:$purple-color;
+				font-weight:$weight700;
+			}
+		  }
+
+		}
+
+		
+
+		.gig-sub {
+		  padding: 5px 12px;
+		  @include position(relative);
+		  margin-top:10px;
+		  border-top: 1px $lightgray-color solid; 
+
+		   .gig-price {
+			  float: right;
+			  font-size: 18px;
+			  line-height: 20px;
+			  font-weight: 700;
+			  color: #00b22d;
+			  text-decoration: none;
+			}
+
+		}
+
+		.gig-collect {
+		  position: absolute;
+		  left: 10px;
+		  font-size:$font-size4;
+		  width: 36px;
+		  height: 12px;
+		  z-index: 2;
+		}
+		
+	}
+}
+
+.howitwork{
+	background:$lightgray-color;
+	padding:70px 0 40px;
+
+	.workbox{
+		margin-bottom:20px;
+
+		h6{
+			font-weight:$weight500;
+
+			a{
+				color:$black-color;
+			}
+		}
+
+		.circleimg{
+			margin-bottom:20px;
+		}
+
+		p{
+			margin-bottom:0;
+		}
+	}
+}
+
+.curatedpages{
+	padding:26px 0;
+	.curatedhead{
+		margin-bottom:20px;
+
+		 h2{
+		 	margin:0;
+		 	font-weight:$weight300;
+		 }
+
+		 .btn{
+		 	margin-top:3px;
+		 }
+	}
+}
+
+
+.proejctcome{
+	background:$lightgreen-color;
+	padding:50px 0 30px;
+
+	.projeectcome-in{
+		.greenbtn{
+			border-radius:10px;
+		}
+	}
+
+	p{
+		font-size:$font-size3;
+		margin-bottom:20px;
+	}
+}

@@ -1,0 +1,96 @@
+.profilebox{
+	padding:60px 0;
+	.formbox{
+		max-width:400px;
+		background:$white-color;
+		padding:15px;
+		margin:0 auto;
+		@include border-radius(2px);
+		border:solid 1px $white-color;
+	}
+
+.profileimage{
+		width:80px;
+		height:80px;
+		@include border-radius(50%);
+		overflow:hidden;
+		margin:-55px auto 0;
+		background:$lightgray-color;
+		@include position(relative);
+		&:before{
+			@include position(absolute);
+			content:"\f007";
+			  display: inline-block;
+			  font: normal normal normal 14px/1 FontAwesome;
+			  font-size: inherit;
+			  text-rendering: auto;
+			  -webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+			    width: 100%;
+			  text-align: center;
+			  font-size: $font-size11;
+			  opacity: 0.45;
+			  top: 14px;
+			  left:0;
+		}
+	}
+}
+
+.upload{
+	@include position(relative);
+	margin:20px 0 30px;
+
+	.form-group{
+		margin-bottom:0;
+	}
+
+	input{
+		@include border-radius(0);
+	}
+
+	button{
+		@include border-radius(0);
+		background:$purple-color;
+		width:100%;
+		@include box-shadow(none);
+		border:none;
+		height:35px;
+		color:$white-color;
+		@include position(relative);
+		z-index:2;
+	}
+
+	input[type="file"]{
+		@include position(absolute);
+		top:0;
+		left:0;
+		height:0;
+		width:0;
+		opacity:0;
+		visibility:hidden;
+		z-index:1;
+	}
+
+}
+
+.text-strikethru {
+			  @include position(relative);
+			  text-align: center;
+			  margin-top:5px;
+
+			  .line {
+				  height: 1px;
+				  background-color:$lightgray-color;
+				  
+				  margin:0 auto;
+				}
+
+				.text{
+				  @include display(inline-block);
+				  background: $white-color;
+				  padding: 5px 10px;
+				  font-size: 14px;
+				  top: -16px;
+				  @include position(relative);
+				}
+			}

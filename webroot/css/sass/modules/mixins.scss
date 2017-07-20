@@ -1,0 +1,74 @@
+.box-sizing{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@mixin backround-size($size){
+	-webkit-background-size:$size;
+	-moz-background-size:$size;
+	-ms-background-size:$size;
+	-o-background-size:$size;
+	background-size:$size;
+}
+
+
+@mixin box-shadow($boxshadow){
+	-webkit-box-shadow:$boxshadow;
+	-moz-box-shadow:$boxshadow;
+	-ms-box-shadow:$boxshadow;
+	-o-box-shadow:$boxshadow;
+	box-shadow:$boxshadow;
+}
+
+@mixin transition($transition){
+	-webkit-transition:$transition;
+	-moz-transition:$transition;
+	-ms-transition:$transition;
+	-o-transition:$transition;
+	transition:$transition;
+}
+
+@mixin display($display){
+	display:$display;
+}
+
+@mixin valign($valign){
+	vertical-align:$valign;
+}
+
+@mixin position($position){
+	position:$position;
+}
+
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+@mixin transform($transform){
+	-webkit-transition:$transform;
+	-moz-transition:$transform;
+	-ms-transition:$transform;
+	-o-transition:$transform;
+	transition:$transform;
+}
+
+@mixin workbreak($workbreak){
+	-webkit-word-break:$workbreak;
+	-moz-word-break:$workbreak;
+	-ms-word-break:$workbreak;
+	-o-word-break:$workbreak;
+	word-break:$workbreak;
+}
